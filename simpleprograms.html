@@ -55,6 +55,22 @@
 
   <h1>Simple Lua Programs</h1>
 
+  <h2>Sample Input Output</h2>
+  <p>This program is a basic usage of how to interact with standard in and standard out.</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save the code as <code>sampleIO.lua</code></li>
+    <li>Run it using:</li>
+  </ol>
+  <pre><code>lua sampleIO.lua</code></pre>
+
+  <pre><code>
+  print("Please enter your name:")
+  userName = io.read()
+  print("Hello " .. userName)
+  </code></pre>
+
   <h2>Factorial Function</h2>
   <p>Calculates the factorial of a number and prints the result.</p>
 
@@ -120,15 +136,47 @@ print(table.concat(fizzbuzz(15), ", "))
   <pre><code>lua even.lua</code></pre>
 
   <pre><code>
-function even(max)
+  -- function that finds all the even numbers in a given range from 1 to max
+  function even(max)
+    local sequence = {}
     for i = 1, max do
-        if i % 2 == 0 then
-            print(i)
-        end
+      if i % 2 == 0 then
+        sequence[i/2] = i
+      end
     end
-end
+    return sequence
+  end
+    
+  print(table.concat(even(16), ", "))
+  </code></pre>
 
-even(16)
+  <h2>Prime Checker</h2>
+  <p>This program checks if a given number is prime and returns true or false.</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save the code as <code>prime.lua</code></li>
+    <li>Run it using:</li>
+  </ol>
+  <pre><code>lua prime.lua</code></pre>
+
+  <pre><code>
+  --Checks if a given number is prime
+  function isPrime(number) 
+      if number <= 1 then
+          return false
+      end
+      for i = 2, math.floor(math.sqrt(number)) + 1 do
+          if number % i == 0 then
+              return false
+          else 
+              return true
+          end
+      end
+  end
+    
+  givenNumber = 5
+  print(givenNumber .. " is a Prime: " .. (isPrime(givenNumber) and 'true' or 'false'))
   </code></pre>
 
   <div style="text-align: center; margin-top: 3rem;">
