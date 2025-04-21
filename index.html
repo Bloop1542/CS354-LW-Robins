@@ -1,19 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Robins</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team Robins - Lua Language Site</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #4f46e5;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.75rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .nav-link {
+      display: block;
+      background-color: #e0e7ff;
+      color: #1e3a8a;
+      text-decoration: none;
+      padding: 1.25rem;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .nav-link:hover {
+      background-color: #c7d2fe;
+    }
+    footer {
+      text-align: center;
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
+  <header>
     <h1>Hello, Robins!</h1>
-    <p>
-	    <a href="history.html">Description & History</a><br>
-        <a href="documents.html">Specification, Documents, and etc.</a><br>
-        <a href="translators.html">Translators</a><br>
-        <a href="introductions.html">Simple Programs</a><br>
-        <a href="programs.html">More Complex Programs</a><br>
-        <a href="comparisions.html">Language Comparisons</a><br>
-    </p>
+    <p>Welcome to our Lua programming language showcase site</p>
+  </header>
+
+  <main>
+    <div class="nav-grid">
+      <a href="history.html" class="nav-link">Description & History</a>
+      <a href="documents.html" class="nav-link">Specification, Manuals & Tutorials</a>
+      <a href="translators.html" class="nav-link">Translators</a>
+      <a href="simpleprograms.html" class="nav-link">Simple Programs</a>
+      <a href="complexprograms.html" class="nav-link">More Complex Programs</a>
+      <a href="comparisons.html" class="nav-link">Language Comparisons</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Team Robins | CS 354 - Boise State University
+  </footer>
 </body>
 </html>

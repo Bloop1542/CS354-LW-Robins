@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Lua Programs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #1abc9c;
+    }
+    pre {
+      background-color: #f4f4f4;
+      border-left: 5px solid #ccc;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">⬅ Back to Home</a>
+
+  <h1>Simple Lua Programs</h1>
+
+  <h2>Factorial Function</h2>
+  <p>Calculates the factorial of a number and prints the result.</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save the code as <code>factorial.lua</code></li>
+    <li>Run it in the terminal using:</li>
+  </ol>
+  <pre><code>lua factorial.lua</code></pre>
+
+  <pre><code>
+function factorial(num)
+    local product = 1
+    for i = 1, num do
+        product = product * i
+    end
+    print("Factorial of " .. num .. " is " .. product)
+end
+
+factorial(6)
+  </code></pre>
+
+  <h2>FizzBuzz</h2>
+  <p>Prints numbers from 1 through N, replacing multiples of 3 with "fizz", 5 with "buzz", and both with "fizzbuzz".</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save the code as <code>fizzbuzz.lua</code></li>
+    <li>Run it using:</li>
+  </ol>
+  <pre><code>lua fizzbuzz.lua</code></pre>
+
+  <pre><code>
+function fizzbuzz(max)
+    local sequence = {}
+    for i = 1, max do
+        local temp = ""
+        if i % 3 == 0 then 
+            temp = temp .. "fizz"
+        end
+        if i % 5 == 0 then
+            temp = temp .. "buzz"
+        end
+        if temp == "" then 
+            temp = temp .. i
+        end
+        sequence[i] = temp
+    end
+    return sequence
+end
+
+print(table.concat(fizzbuzz(15), ", "))
+  </code></pre>
+
+  <h2>Even Number Printer</h2>
+  <p>This program prints all even numbers from 1 to a specified maximum.</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save the code as <code>even.lua</code></li>
+    <li>Run it using:</li>
+  </ol>
+  <pre><code>lua even.lua</code></pre>
+
+  <pre><code>
+function even(max)
+    for i = 1, max do
+        if i % 2 == 0 then
+            print(i)
+        end
+    end
+end
+
+even(16)
+  </code></pre>
+
+</body>
+</html>

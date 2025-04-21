@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Description & History of Lua Programming Language</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Description & History of Lua</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 2rem;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #1abc9c;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-    <p><a href="index.html">Home</a></p>
-    
-    <h1>What is Lua?</h1>
-    <p>Lua is a scripting language that prides itself on its speed. The language is embeddable and supports procedural, object-oriented, functional, 
-    and data-driven programming as well as data description. The language also has variants that you can choose to use.</p>
 
-    <h1>History of Lua</h1>
-    <p>Lua was created in 1993 by Roberto Ierusalimschy, Luiz Henrique de Figueiredo, and Waldemar Celes, members of the Computer Graphics Technology Group (TeCGraf) at the Pontifical Catholic University of Rio de Janeiro (PUC-Rio) in Brazil. Initially designed to meet the demand for a lightweight, embeddable scripting language in industrial applications, Lua's first use case was for data entry tools at Petrobras, Brazil's state-owned oil company.</p>
-    <p>The language evolved from SOL (Simple Object Language) and DEL (Data-Entry Language), two domain-specific languages developed at TeCGraf. Lua 1.0 was released in July 1993, featuring a simple syntax inspired by Modula and Scheme. By version 3.0 in 1997, Lua introduced support for functions as first-class values and anonymous functions.</p>
-    <p>Lua 5.0, released in 2003, marked a major milestone with the introduction of a standalone interpreter and a new virtual machine. The language gained global traction in gaming and embedded systems throughout the 2000s. Version 5.3 (2015) added integers, bitwise operations, and UTF-8 support. Today, Lua remains actively maintained by its original creators, with version 5.4.6 released in 2023.</p>
+  <a href="index.html">⬅ Back to Home</a>
 
-    <h1>Where is Lua used?</h1>
-    <p>Lua is used in several industrial applications and especially with embedded systems. It is currently the leading scripting language for 
-    games, even winning the Front Line Award in 2011 from the Game Developers Magazine. Even for games or apps primarily coded in other languages,
-    it's common to see them use Lua for mods or extensions. Examples include:</p>
-    <ul>
-        <li>Adobe's Photoshop Lightroom</li>
-        <li>World of Warcraft</li>
-        <li>Angry Birds</li>
-        <li>Roblox</li>
-        <li>Garry's Mod</li>
-        <li>Project Zomboid</li>
-        <li>Factorio</li>
-        <li>Friday Night Funkin'</li>
-        <li>MySQL Workbench</li>
-        <li>Scrap Mechanic</li>
-        <li>Warframe</li>
-    </ul>
+  <h1>What is Lua?</h1>
+  <p>Lua is a scripting language that prides itself on its speed. The language is embeddable and supports procedural, object-oriented, functional, 
+  and data-driven programming as well as data description.</p>
 
-    <h1>Lua's Advantages</h1>
-    <h3>Speed</h3>
-    <p>Several benchmarks show Lua as the fastest interpreted scripting language. It is also known that an aspiration of scripting languages is to 
-    be "as fast as Lua" as it has built a reputation on performance. Significant portions of larger applications have been written in Lua. For 
-    additional speed, developers recommend using LuaJIT, an independent implementation that uses a just-in-time compiler.</p>
+  <h1>History of Lua</h1>
+  <p>Lua was created in 1993 by Roberto Ierusalimschy, Luiz Henrique de Figueiredo, and Waldemar Celes, members of the Computer Graphics Technology Group (TeCGraf) at PUC-Rio in Brazil. Lua evolved from internal languages like SOL and DEL, and by version 5.0 in 2003, it introduced a standalone interpreter and virtual machine. Lua has since been adopted globally, especially in games and embedded systems.</p>
 
-    <h3>Portability</h3>
-    <p>The language is distributed in a small package that builds out-of-the-box on any platform with a standard C compiler. This means it runs 
-    across Unix variants, Windows, Android, iOS, BREW, Symbian, and Windows Phone. It's even used on embedded microprocessors like ARM and Rabbit, 
-    including platforms like Lego Mindstorms.</p>
+  <h1>Where is Lua used?</h1>
+  <ul>
+    <li>Adobe Lightroom</li>
+    <li>World of Warcraft (UI mods)</li>
+    <li>Roblox</li>
+    <li>Garry's Mod</li>
+    <li>Project Zomboid</li>
+    <li>Factorio</li>
+    <li>Friday Night Funkin'</li>
+    <li>MySQL Workbench</li>
+    <li>Warframe</li>
+  </ul>
 
-    <h3>Embeddable</h3>
-    <p>Lua has a small footprint and well-documented API that allows seamless integration with code in other languages. It can be extended with 
-    libraries from other languages and has been used to extend programs written in other scripting languages.</p>
+  <h1>Lua's Advantages</h1>
 
-    <h3>Powerful</h3>
-    <p>A fundamental concept behind Lua is using meta-mechanisms to implement features instead of providing features directly. While not a pure 
-    object-oriented language, it uses meta-mechanisms to implement classes and inheritance, allowing flexible extension of semantics in 
-    unconventional ways.</p>
+  <h3>Speed</h3>
+  <p>Lua is often the fastest interpreted scripting language in benchmarks. LuaJIT boosts performance even more with just-in-time compilation.</p>
 
-    <h3>Small</h3>
-    <p>Adding Lua to an application doesn't significantly increase its size (tarball: 365K compressed, 1.3M uncompressed). The interpreter is 
-    279K and library 464K, contributing to both efficiency and security.</p>
+  <h3>Portability</h3>
+  <p>Lua is small and compiles on virtually any system with a C compiler. It's used across Windows, Linux, iOS, Android, embedded chips, and even Lego Mindstorms.</p>
 
-    <h3>Free</h3>
-    <p>Lua is free open-source software distributed under the MIT license, available for any purpose at no cost.</p>
+  <h3>Embeddable</h3>
+  <p>Lua integrates easily with other languages using a small, clean API. It's frequently used to embed scripting into C/C++ applications.</p>
 
-    <h1>Additional Information</h1>
-    <ul>
-        <li>The name Lua comes from the Portuguese word for moon</li>
-        <li>Lua is designed and maintained by a team at PUC-Rio in Brazil</li>
-        <li><a href="https://lua.org/donations.html">Support Lua through donations</a></li>
-        <li><a href="https://lua.org/about.html">Official Lua about page</a></li>
-    </ul>
+  <h3>Powerful</h3>
+  <p>Lua uses meta-mechanisms rather than hardcoded features, making it flexible. While not class-based by default, it supports object-oriented design patterns.</p>
+
+  <h3>Small</h3>
+  <p>The full Lua distribution is tiny—just a few hundred kilobytes. This makes it ideal for performance-sensitive and embedded applications.</p>
+
+  <h3>Free</h3>
+  <p>Lua is free open-source software under the MIT license, meaning you can use it for any purpose without cost.</p>
+
+  <h1>Additional Information</h1>
+  <ul>
+    <li><strong>Lua</strong> is Portuguese for \"moon\"</li>
+    <li>Maintained by its creators at PUC-Rio in Brazil</li>
+    <li><a href="https://lua.org/donations.html" target="_blank">Donate to Lua</a></li>
+    <li><a href="https://lua.org/about.html" target="_blank">Official About Page</a></li>
+  </ul>
+
 </body>
 </html>

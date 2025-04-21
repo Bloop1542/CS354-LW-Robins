@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Language Comparison</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #1abc9c;
+    }
+    .table-container {
+      overflow-x: auto;
+      margin-top: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+    tr:hover {
+      background-color: #f1f9ff;
+    }
+    td:first-child {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">⬅ Back to Home</a>
+
+  <h1>Language Comparison Table</h1>
+  <p>This table compares Lua with several other representative programming languages based on key features and characteristics.</p>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Lua</th>
+          <th>Python</th>
+          <th>C</th>
+          <th>JavaScript</th>
+          <th>Java</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Typing</td>
+          <td>Dynamically typed</td>
+          <td>Dynamically typed</td>
+          <td>Statically typed</td>
+          <td>Dynamically typed</td>
+          <td>Statically typed</td>
+        </tr>
+        <tr>
+          <td>Memory Management</td>
+          <td>Garbage collected</td>
+          <td>Garbage collected</td>
+          <td>Manual (malloc/free)</td>
+          <td>Garbage collected</td>
+          <td>Garbage collected</td>
+        </tr>
+        <tr>
+          <td>Execution</td>
+          <td>Interpreted / Embedded</td>
+          <td>Interpreted (CPython)</td>
+          <td>Compiled</td>
+          <td>Interpreted (browser) / JIT</td>
+          <td>Compiled to bytecode (JVM)</td>
+        </tr>
+        <tr>
+          <td>Paradigm</td>
+          <td>Procedural, functional</td>
+          <td>Multi-paradigm</td>
+          <td>Procedural</td>
+          <td>Event-driven, functional</td>
+          <td>Object-oriented</td>
+        </tr>
+        <tr>
+          <td>Use Cases</td>
+          <td>Game scripting, embedded apps</td>
+          <td>Web, data science, automation</td>
+          <td>System programming, OS kernels</td>
+          <td>Web development (frontend)</td>
+          <td>Enterprise software, Android apps</td>
+        </tr>
+        <tr>
+          <td>Ease of Learning</td>
+          <td>Easy</td>
+          <td>Very easy</td>
+          <td>Challenging</td>
+          <td>Easy</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td>Standard Library</td>
+          <td>Small/minimal</td>
+          <td>Large</td>
+          <td>Minimal</td>
+          <td>Medium</td>
+          <td>Large</td>
+        </tr>
+        <tr>
+          <td>Syntax Style</td>
+          <td>Lightweight, script-like</td>
+          <td>Indentation-based</td>
+          <td>Verbose, symbolic</td>
+          <td>Flexible, C-style</td>
+          <td>Strict, C-style</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

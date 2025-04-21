@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>More Complex Lua Programs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #1abc9c;
+    }
+    pre {
+      background-color: #f4f4f4;
+      border-left: 5px solid #ccc;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    hr {
+      margin: 2.5rem 0;
+      border: none;
+      border-top: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">⬅ Back to Home</a>
+
+  <h1>More Complex Lua Programs</h1>
+
+  <h2>Basic Calculator</h2>
+  <p>This Lua program allows a user to perform basic arithmetic operations between two numbers using input from the terminal.</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save the code below as <code>calculator.lua</code></li>
+    <li>Open a terminal and run it using:</li>
+  </ol>
+  <pre><code>lua calculator.lua</code></pre>
+
+  <pre><code>
+function add(a, b) return a + b end
+function subtract(a, b) return a - b end
+function multiply(a, b) return a * b end
+function divide(a, b) return a / b end
+function exponent(a, b) return a ^ b end
+
+print("Enter a number:")
+num1 = tonumber(io.read())
+print("Enter an operator (+, -, *, /, ^):")
+operator = io.read()
+print("Enter another number:")
+num2 = tonumber(io.read())
+
+local result = 0
+if operator == "+" then
+    result = add(num1, num2)
+elseif operator == "-" then
+    result = subtract(num1, num2)
+elseif operator == "*" then
+    result = multiply(num1, num2)
+elseif operator == "/" then
+    result = divide(num1, num2)
+elseif operator == "^" then
+    result = exponent(num1, num2)
+else
+    print("Invalid operator")
+    os.exit()
+end
+
+print(num1 .. " " .. operator .. " " .. num2 .. " = " .. result)
+  </code></pre>
+
+  <hr>
+
+  <h2>Dice Roller</h2>
+  <p>This Lua program simulates two standard 6-sided dice. It allows you to:</p>
+  <ul>
+    <li>Roll two dice</li>
+    <li>Re-roll one, both, or neither</li>
+    <li>Display the total sum of the dice</li>
+  </ul>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save the code as <code>dice_roller.lua</code></li>
+    <li>Run it with:</li>
+  </ol>
+  <pre><code>lua dice_roller.lua</code></pre>
+
+  <pre><code>
+math.randomseed(os.time())
+
+function rollDie() return math.random(1, 6) end
+function rollDice() return rollDie(), rollDie() end
+
+function showResults(d1, d2)
+  print("Die 1: " .. d1)
+  print("Die 2: " .. d2)
+  print("Total: " .. (d1 + d2))
+end
+
+function askReroll()
+  print("\\nReroll options: 1, 2, both, or n for none")
+  io.write("> ")
+  return io.read()
+end
+
+local d1, d2 = rollDice()
+showResults(d1, d2)
+
+while true do
+  local choice = askReroll()
+  if choice == "1" then
+    d1 = rollDie()
+  elseif choice == "2" then
+    d2 = rollDie()
+  elseif choice == "both" then
+    d1, d2 = rollDice()
+  elseif choice == "n" then
+    print("Final roll:")
+    showResults(d1, d2)
+    break
+  else
+    print("Invalid input.")
+  end
+  showResults(d1, d2)
+end
+  </code></pre>
+
+  <hr>
+
+  <h2>Number Guessing Game</h2>
+  <p>This program generates a random number between 1 and 100 and prompts the user to guess it, giving feedback after each try.</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save as <code>guessing_game.lua</code></li>
+    <li>Run using:</li>
+  </ol>
+  <pre><code>lua guessing_game.lua</code></pre>
+
+  <pre><code>
+math.randomseed(os.time())
+
+local secret = math.random(1, 100)
+local guess = nil
+local attempts = 0
+
+print("I'm thinking of a number between 1 and 100. Can you guess it?")
+
+while guess ~= secret do
+  io.write("Enter your guess: ")
+  guess = tonumber(io.read())
+  attempts = attempts + 1
+
+  if not guess then
+    print("Please enter a valid number.")
+  elseif guess < secret then
+    print("Too low!")
+  elseif guess > secret then
+    print("Too high!")
+  else
+    print("Correct! You guessed it in " .. attempts .. " tries.")
+  end
+end
+  </code></pre>
+
+  <hr>
+
+  <h2>Factor Finder</h2>
+  <p>This program returns all integer factors of a given number using <code>math.modf</code>.</p>
+
+  <h3>📥 How to Run</h3>
+  <ol>
+    <li>Save as <code>factors.lua</code></li>
+    <li>Run it using:</li>
+  </ol>
+  <pre><code>lua factors.lua</code></pre>
+
+  <pre><code>
+function factors(num)
+  local factorArray = {}
+  local j = 1
+  for i = 1, num do
+    local integer, decimal = math.modf(num / i)
+    if decimal == 0.0 then
+      factorArray[j] = integer
+      j = j + 1
+      print(integer)
+    end
+  end
+  return factorArray
+end
+
+factors(1024)
+print("-----")
+print(factors(17)[2])
+  </code></pre>
+
+</body>
+</html>
