@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lua Installation Guide</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    a {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #2980b9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      color: #1abc9c;
+    }
+    pre {
+      background-color: #f4f4f4;
+      border-left: 5px solid #ccc;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    code {
+      font-family: Consolas, monospace;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    li {
+      margin-bottom: 0.4rem;
+    }
+    hr {
+      margin: 2.5rem 0;
+      border: none;
+      border-top: 2px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html">⬅ Back to Home</a>
+
+  <h1>Installing Lua</h1>
+
+  <h2>Windows Installation</h2>
+  <h3>How to Install</h3>
+  <ol>
+    <li>Download the Windows binaries from <a href="https://lua.org/ftp/">lua.org/ftp</a></li>
+    <li>Add Lua to your PATH environment variable</li>
+    <li>Verify installation in Command Prompt:</li>
+  </ol>
+  <pre><code>lua -v</code></pre>
+
+  <h2>Linux Installation</h2>
+  <h3>How to Install</h3>
+  <ol>
+    <li>For Debian/Ubuntu-based systems:</li>
+  </ol>
+  <pre><code>sudo apt-get install lua5.4</code></pre>
+  <ol start="2">
+    <li>For Fedora/RHEL-based systems:</li>
+  </ol>
+  <pre><code>sudo dnf install lua</code></pre>
+
+  <h2>macOS Installation</h2>
+  <h3>How to Install</h3>
+  <ol>
+    <li>Using Homebrew:</li>
+  </ol>
+  <pre><code>brew install lua</code></pre>
+  <ol start="2">
+    <li>Verify installation:</li>
+  </ol>
+  <pre><code>lua -v</code></pre>
+
+  <hr>
+
+  <h1>Lua Translators</h1>
+
+  <h2>LuaJIT (Just-In-Time Compiler)</h2>
+  <h3>How to Install</h3>
+  <ol>
+    <li>Download from <a href="https://luajit.org/download.html">luajit.org</a></li>
+    <li>Build from source:</li>
+  </ol>
+  <pre><code>make &amp;&amp; sudo make install</code></pre>
+  <ol start="3">
+    <li>Verify installation:</li>
+  </ol>
+  <pre><code>luajit -v</code></pre>
+
+  <h2>LuaRocks (Package Manager)</h2>
+  <h3>How to Install</h3>
+  <ol>
+    <li>Windows: Use the standalone installer</li>
+    <li>Linux/macOS:</li>
+  </ol>
+  <pre><code>wget https://luarocks.org/releases/luarocks-3.9.2.tar.gz
+tar zxpf luarocks-3.9.2.tar.gz
+cd luarocks-3.9.2
+./configure &amp;&amp; make &amp;&amp; sudo make install</code></pre>
+  <ol start="3">
+    <li>Verify installation:</li>
+  </ol>
+  <pre><code>luarocks --version</code></pre>
+
+  <hr>
+
+  <h1>Verifying Your Setup</h1>
+  <p>Create a test file <code>hello.lua</code> with:</p>
+  <pre><code>
+print("Hello, Lua!")
+  </code></pre>
+  <p>Run it with:</p>
+  <pre><code>
+lua hello.lua
+  </code></pre>
+  <p>For LuaJIT:</p>
+  <pre><code>
+luajit hello.lua
+  </code></pre>
+
+</body>
+</html>
