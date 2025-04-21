@@ -1,4 +1,4 @@
--- This function computes all the factors of the number num
+-- This function computes all the factors of the integer num
 function factors(num)
     local factorArray = {}
     -- variable j is a placeholder for each index
@@ -8,12 +8,23 @@ function factors(num)
         if(decimal == 0.0) then
             factorArray[j] = integer
             j = j + 1
-            print(integer)
         end
     end
     return factorArray
 end
 
-factors(1024)
-print("-----")
-print(factors(17)[2]) -- Prints the item at the second index of the returned array
+print("Enter an integer you wish to factor: ")
+numToFactor = io.read() -- reads from stdin
+
+local factorArray = factors(numToFactor)
+if(factorArray[1] == nil) then -- The number could not be factored, occurs for doubles but strings provide errors
+    print("The program could not factor the input")
+else
+    local arrayLength = #factorArray
+    local factorString = ""
+    for i = 1, arrayLength-1 do
+        factorString = factorString .. tostring(factorArray[i]) .. ", " -- .. represents concatenation
+    end
+    factorString = factorString .. tostring(factorArray[arrayLength])
+    print("The factors of your number are:", factorString) -- , replaces + for variables
+end
